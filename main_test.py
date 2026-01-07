@@ -6,7 +6,7 @@ from main import app
 
 class TestApp(unittest.TestCase):
     def setUp(self):
-        self.client = TestClient()
+        self.client = TestClient(app)
         with open("data.json", "r") as f:
             self.data = json.load(f)
 
